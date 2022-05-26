@@ -10,7 +10,7 @@ Utilizando console aws
 aws configure
 aws sts get-caller-identity
 rm -rf ./rm -rf ./.kube/config
-aws eks update-kubeconfig --name <NOME_CLUSTER> --region <SUA_REGIAO>
+aws eks update-kubeconfig --name < NOME_CLUSTER > --region < SUA_REGIAO >
 ```
 
 Criar os nós
@@ -26,20 +26,20 @@ Nome Cloud Formation:
 - k8s-ilab-nodes
 
 Nome cluster
-- <NOME_CLUSTER>
+- < NOME_CLUSTER >
 
 ClusterControlPlaneSecurityGroup
- - selecione o criado pelo EKS
+ - Selecione o criado pelo EKS
 
 NodeGroupName
-- <UM NOME QUE VC QUEIRA>
+- < UM NOME QUE VC QUEIRA >
 
 NodeImageId
 - https://cloud-images.ubuntu.com/docs/aws/eks/
 - ami-00ff481e776f6a0c2
 
 KeyName
-- <SUA CHAVE SSH CADASTRADA NA AWS>
+- < SUA CHAVE SSH CADASTRADA NA AWS >
 
 Selecione a rede
 - VPC
