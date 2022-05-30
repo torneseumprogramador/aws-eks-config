@@ -34,10 +34,10 @@ vpc:
       us-east-1c: { id: subnet-08cf400a49fb1b679 }
 
 nodeGroups:
-  - name: ng-1
+  - name: node-group-meu-clluster
     instanceType: t2.medium
     volumeSize: 30
-    desiredCapacity: 3
+    desiredCapacity: 3 # quantidadede maquinas
     ssh:
       allow: true
       publicKeyPath: ~/.ssh/id_rsa.pub # chave ssh utilizará:  ~/.ssh/id_rsa.pub
