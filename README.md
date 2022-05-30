@@ -11,8 +11,37 @@ eksctl version
 
 Criando cluster
 - https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html
+- https://eksctl.io/usage/creating-and-managing-clusters/
 ```shell
 eksctl create cluster --name k8s-desafio --region us-east-1
+kubectl get nodes -o wide
+kubectl get pods -A -o wide
+```
+- Criando configurando detalhes
+```yml
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: basic-cluster
+  region: eu-north-1
+
+nodeGroups:
+  - name: ng-1
+    instanceType: m5.large
+    desiredCapacity: 10
+    volumeSize: 80
+    ssh:
+      allow: true # will use ~/.ssh/id_rsa.pub as the default ssh key
+  - name: ng-2
+    instanceType: m5.xlarge
+    desiredCapacity: 2
+    volumeSize: 100
+    ssh:
+      publicKeyPath: ~/.ssh/ec2_id_rsa.pub
+```
+```shell
+eksctl create cluster -f cluster.yaml
 kubectl get nodes -o wide
 kubectl get pods -A -o wide
 ```
