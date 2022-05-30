@@ -23,22 +23,28 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: basic-cluster
-  region: eu-north-1
+  name: ilab-cluster
+  region: us-east-1
 
 nodeGroups:
   - name: ng-1
-    instanceType: m5.large
-    desiredCapacity: 10
-    volumeSize: 80
+    instanceType: t2.medium
+    volumeSize: 30
     ssh:
-      allow: true # will use ~/.ssh/id_rsa.pub as the default ssh key
+      allow: true # chave ssh utilizará:  ~/.ssh/id_rsa.pub as the default ssh key
+"cluster.yml" 19L, 382B                                                                                         6,3           Top
+
+nodeGroups:
+  - name: ng-1
+    instanceType: t2.medium
+    volumeSize: 30
+    ssh:
+      allow: true # chave ssh utilizará:  ~/.ssh/id_rsa.pub as the default ssh key
   - name: ng-2
-    instanceType: m5.xlarge
-    desiredCapacity: 2
-    volumeSize: 100
+    instanceType: t2.medium
+    volumeSize: 30
     ssh:
-      publicKeyPath: ~/.ssh/ec2_id_rsa.pub
+      publicKeyPath: ~/.ssh/id_rsa.pub
 ```
 ```shell
 eksctl create cluster -f cluster.yaml # cria o cluster
