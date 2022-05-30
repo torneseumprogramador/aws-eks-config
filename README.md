@@ -26,6 +26,13 @@ metadata:
   name: meu-cluster
   region: us-east-1
 
+vpc:
+  subnets:
+    public:
+      us-east-1a: { id: subnet-0ba469906a3af5f1d }
+      us-east-1b: { id: subnet-0daf196973328ac81 }
+      us-east-1c: { id: subnet-08cf400a49fb1b679 }
+
 nodeGroups:
   - name: ng-1
     instanceType: t2.medium
