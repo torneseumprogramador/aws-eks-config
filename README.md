@@ -31,20 +31,17 @@ nodeGroups:
     instanceType: t2.medium
     volumeSize: 30
     ssh:
-      allow: true # chave ssh utilizará:  ~/.ssh/id_rsa.pub
-"cluster.yml" 19L, 382B                                                                                         6,3           Top
-
+      allow: true
+      publicKeyPath: ~/.ssh/id_rsa.pub # chave ssh utilizará:  ~/.ssh/id_rsa.pub
+      
 nodeGroups:
   - name: ng-1
     instanceType: t2.medium
     volumeSize: 30
-    ssh:
-      allow: true # chave ssh utilizará:  ~/.ssh/id_rsa.pub
+      
   - name: ng-2
     instanceType: t2.medium
     volumeSize: 30
-    ssh:
-      publicKeyPath: ~/.ssh/id_rsa.pub
 ```
 ```shell
 eksctl create cluster -f cluster.yaml # cria o cluster
