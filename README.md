@@ -31,7 +31,7 @@ nodeGroups:
     instanceType: t2.medium
     volumeSize: 30
     ssh:
-      allow: true # chave ssh utilizará:  ~/.ssh/id_rsa.pub as the default ssh key
+      allow: true # chave ssh utilizará:  ~/.ssh/id_rsa.pub
 "cluster.yml" 19L, 382B                                                                                         6,3           Top
 
 nodeGroups:
@@ -39,7 +39,7 @@ nodeGroups:
     instanceType: t2.medium
     volumeSize: 30
     ssh:
-      allow: true # chave ssh utilizará:  ~/.ssh/id_rsa.pub as the default ssh key
+      allow: true # chave ssh utilizará:  ~/.ssh/id_rsa.pub
   - name: ng-2
     instanceType: t2.medium
     volumeSize: 30
