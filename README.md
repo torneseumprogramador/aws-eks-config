@@ -41,9 +41,10 @@ nodeGroups:
       publicKeyPath: ~/.ssh/ec2_id_rsa.pub
 ```
 ```shell
-eksctl create cluster -f cluster.yaml
+eksctl create cluster -f cluster.yaml # cria o cluster
 kubectl get nodes -o wide
 kubectl get pods -A -o wide
+eksctl delete cluster -f cluster.yaml # apaga o cluster
 ```
 
 Apagar Cluster
