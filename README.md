@@ -23,7 +23,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: ilab-cluster
+  name: meu-cluster
   region: us-east-1
 
 nodeGroups:
@@ -84,7 +84,7 @@ Colocar o script
 - https://amazon-eks.s3-us-west-2.amazonaws.com/cloudformation/2018-12-10/amazon-eks-nodegroup.yaml
 
 Nome Cloud Formation: 
-- k8s-ilab-nodes
+- k8s-nodes
 
 Nome cluster
 - desafio-k8s
@@ -111,7 +111,7 @@ Nós criados agora é somente ir no seu console e atrelar os nodes ao seu k8s
 wget https://amazon-eks.s3-us-west-2.amazonaws.com/cloudformation/2018-08-30/aws-auth-cm.yaml
 ```
 No cloudformation criado ir em outputs e copiar o NodeInstanceRole:
-- exemplo: arn:aws:iam::473247640396:role/k8s-ilab-nodes-NodeInstanceRole-126RT2GZ42G5X
+- exemplo: arn:aws:iam::473247640396:role/k8s-nodes-NodeInstanceRole-126RT2GZ42G5X
 - https://us-east-1.console.aws.amazon.com/cloudformation/
 
 Depois colar no arquivo baixado:
