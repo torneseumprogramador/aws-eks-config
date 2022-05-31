@@ -39,7 +39,7 @@ nodeGroups:
     volumeSize: 30
     desiredCapacity: 3 # quantidadede maquinas
     ssh:
-      allow: true
+      # allow: true
       publicKeyPath: ~/.ssh/id_rsa.pub # chave ssh utilizará:  ~/.ssh/id_rsa.pub
       
 ```
